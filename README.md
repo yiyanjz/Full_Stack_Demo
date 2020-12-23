@@ -1,5 +1,5 @@
 # Full_Stack_Demo
-Created a web based tool to CRED patients and appointments information from an excel documents
+Created a web based tool to CRED patients and appointments information with the option to extract data from an excel documents
 
 # Medical Practice Web-based Tool
 Video Demo: Link
@@ -26,7 +26,7 @@ Video Demo: Link
 3) Open up terminal or Command Prompt
 4) Go into the folder you just downloaded(Full_Stack_Demo)
 5) In terminal or command prompt type python app.py
-6) copy http://127.0.0.1:5000/ and paste it in any browser (Google Chrome Prefered)
+6) copy http://127.0.0.1:5000/ with in terminal and paste it in any browser (Google Chrome Prefered)
 1) To read in patients.cvs and appointment.cvs (--Optional--)
 2) In terminal or command prompt type python patients (--Optional--)
 3) In terminal or command prompt type python appointments (--Optional--)
