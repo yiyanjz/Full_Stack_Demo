@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Patient</title>
+{% endblock %}
+
+
+{% block body %}
+<br>
+<form class="form-signin" action='/new' method="POST">
+    <div class="text-center">
+        <img class="mb-4"
+            src="https://static.wixstatic.com/media/f602bd_7451782379214a96b241a7a016f233c6~mv2.png/v1/fit/w_2500,h_1330,al_c/f602bd_7451782379214a96b241a7a016f233c6~mv2.png"
+            alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Create New Patient</h1>
+    </div>
+
+    <br>
+    <div class="form-label-group">
+        First Name: <input type="text" class="form-control" placeholder="First Name" name='Fname' id='Fname'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Last Name: <input type="text" class="form-control"  placeholder="Last Name" name='Lname' id='Lname'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Date of Birth: <input type="date" id='date' class="form-control" placeholder="xx-xx-xxxx" name='DOB' id='DOB'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Phone Number: <input type="text" class="form-control"placeholder="xxx-xxx-xxxx" name='Pnum' id='Pnum'>
+    </div>
+    <br>
+
+    <div class="form-label-group">
+        Address: <input type="text" class="form-control" placeholder="Optional" name='Address' id='Address'>
+    </div>
+    <br>
+
+    <div class="form-label-group">
+        Insurance Tpye: <input type="text" class="form-control" placeholder="Optional" name='IT' id='IT'>
+    </div>
+    <br>
+
+    <div class="form-label-group">
+        Medical Number: <input type="text" class="form-control" placeholder="Optional" name='MN' id='MN'>
+    </div>
+    <br>
+    
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+
+{% endblock %}

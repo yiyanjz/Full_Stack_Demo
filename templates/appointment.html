@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Appointment</title>
+{% endblock %}
+
+
+{% block body %}
+<br>
+<form class="form-signin" action='/appointment/{{post.id}}' method='POST'>
+    <div class="text-center">
+        <img class="mb-4"
+            src="https://static.wixstatic.com/media/f602bd_7451782379214a96b241a7a016f233c6~mv2.png/v1/fit/w_2500,h_1330,al_c/f602bd_7451782379214a96b241a7a016f233c6~mv2.png"
+            alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Make a New Appointment</h1>
+    </div>
+
+    <br>
+    <div class="form-label-group">
+        Patient Full Name: <input type="text" class="form-control" placeholder="First Name and Last Name" name='Pname'
+            id='Pname'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Start Date: <input type="date" id="date" class="form-control" placeholder="Year-Month-Date" name='Sdate' , id='Sdate'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Start Time: <input type="time" id='time' class="form-control" placeholder="00:00" name='Stime' id='Stime'>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Appointment Type:</label>
+        <select class="form-control" name='AP' id='AP'>
+            <option>Follow Up</option>
+            <option>Initial Visit</option>
+            <option>Physical</option>
+            <option>Short Visit</option>
+            <option>Long Visit</option>
+            <option>Vaccination</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+{% endblock %}

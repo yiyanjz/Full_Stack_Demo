@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>Edit Appointment </title>
+{% endblock %}
+
+{% block body %} 
+<br>
+<form class="form-signin" action='/profile/page/edit_a/{{post.id}}' method='POST'>
+    <div class="text-center">
+        <img class="mb-4"
+            src="https://static.wixstatic.com/media/f602bd_7451782379214a96b241a7a016f233c6~mv2.png/v1/fit/w_2500,h_1330,al_c/f602bd_7451782379214a96b241a7a016f233c6~mv2.png"
+            alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Edit Appointment</h1>
+    </div>
+
+    <br>
+    <div class="form-label-group">
+        Patient Full Name: <input type="text" class="form-control"  placeholder="First Name and Last Name" name='Pname' id='Pname' value="{{post.Patient_Name}}">
+    </div>
+    <br>
+    <div class="form-label-group">
+        Start Date: <input type="date" id='date' class="form-control"  placeholder="Year-Month-Date" name='Sdate', id='Sdate' value="{{post.Start_Date}}">
+    </div>
+    <br>
+    <div class="form-label-group">
+        Start Time: <input type="time" id="time" class="form-control"  placeholder="00:00" name='Stime' id='Stime' value="{{post.Start_Time}}">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Appointment Type:</label>
+        <select class="form-control" name='AP' id='AP' value="{{post.Appointment_Type}}">
+          <option>Follow Up</option>
+          <option>Initial Visit</option>
+          <option>Physical</option>
+          <option>Short Visit</option>
+          <option>Long Visit</option>
+          <option>Vaccination</option>
+        </select>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+
+{% endblock %}

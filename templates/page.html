@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>Profile</title>
+{% endblock %}
+
+
+{% block body %} 
+
+    <form action='/profile/page/{{post.id}}' method='POST'>
+        <br>
+        <div>
+            <h1 style="display:inline"><small>User Profile</small></h1>
+            <a href="/appointment/{{post.id}}" class="btn btn-outline-success float-end"> Make New Appointment</a>
+        </div>
+        <br>
+        <hr>
+        First Name:<a class="text-danger"> {{post.First_Name}}</a>
+        <br>
+        Last Name:<a class="text-danger"> {{post.Last_Name}}</a>
+        <br>
+        Date of Birth:<a class="text-danger"> {{post.DOB}}</a>
+        <a href="/profile/edit/{{post.id}}" class="btn btn-outline-success float-end">Edit Profile</a>
+        <br>
+        Phone Number:<a class="text-danger"> {{post.Phone_Num}}</a>
+        <br>
+        {% if post.Address%}
+            Address:<a class="text-danger"> {{post.Address}}</a>
+        {% else %}
+            Address:<a class="text-danger"> None</a>
+        {% endif %}
+        <br>
+        {% if post.Address%}
+            Insurance Tpye:<a class="text-danger"> {{post.Insurance_Tpye}}</a>
+        {% else %}
+            Insurance Tpye:<a class="text-danger"> None</a>        
+        {% endif %}
+        <br>
+        {% if post.Address%}
+            Medical Number:<a class="text-danger"> {{post.Medical_Number}}</a> 
+        {% else %}
+            Medical Number:<a class="text-danger"> None</a> 
+        {% endif %}
+        <br>
+        <br>
+    </form>
+
+    <from action='/profile/page/{{appointment.id}}' method='POST'>
+        <h4>Appointment History</h4>
+        <hr>
+        {% for app in appointment[::-1]%}
+            {% if app.Patient_Name %}
+                Patient Name:<a class="text-success"> {{app.Patient_Name}}</a>  
+            {% else %}
+                Patient Name:<a class="text-success"> None</a>  
+            {% endif %}
+            <a href="/profile/page/delete_a/{{app.id}}" class="btn btn-outline-danger float-end me-2">Delete</a>
+            <a href="/profile/page/edit_a/{{app.id}}" class="btn btn-outline-success float-end me-2">Edit</a>
+            <br>
+            {% if app.Start_Date %}
+                Start Date:<a class="text-success"> {{app.Start_Date}}</a>  
+            {% else %}
+                Start Date:<a class="text-success"> None</a>  
+            {% endif %}
+            <br>
+            {% if app.Start_Time %}
+                Start Time:<a class="text-success"> {{app.Start_Time}}</a>  
+            {% else %}
+                Start Time:<a class="text-success"> None</a>  
+            {% endif %}
+            <br>
+            {% if app.Appointment_Type %}
+            Appointment Type:<a class="text-success"> {{app.Appointment_Type}}</a>
+            {% else %}
+                Appointment Type:<a class="text-success"> None</a>
+            {% endif %}
+            <br>
+            <hr>
+        {% endfor %}
+        <br>
+    </from>
+
+
+{% endblock %}

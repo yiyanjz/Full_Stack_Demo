@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit Patient</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<form class="form-signin" action='/profile/edit/{{post.id}}' method='POST'>
+    <div class="text-center">
+        <img class="mb-4"
+            src="https://static.wixstatic.com/media/f602bd_7451782379214a96b241a7a016f233c6~mv2.png/v1/fit/w_2500,h_1330,al_c/f602bd_7451782379214a96b241a7a016f233c6~mv2.png"
+            alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Edit Patient Info</h1>
+    </div>
+    <br>
+    <div class="form-label-group">
+        First Name: <input type="text" class="form-control" placeholder="First Name" name='Fname' id='Fname' value='{{post.First_Name}}'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Last Name: <input type="text" class="form-control" placeholder="Last Name" name='Lname' id='Lname' value='{{post.Last_Name}}'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Date of Birth: <input type="date" id='date' class="form-control" placeholder="xx-xx-xxxx" name='DOB' id='DOB' value='{{post.DOB}}'>
+    </div>
+    <br>
+    <div class="form-label-group">
+        Phone Number: <input type="text" class="form-control" placeholder="xxx-xxx-xxxx" name='Pnum' id='Pnum' value={{post.Phone_Num}}>
+    </div>
+    <br>
+
+    <div class="form-label-group">
+        Address: <input type="text" class="form-control" placeholder="Optional" name='Address' id='Address' value={{post.Address}}>
+    </div>
+    <br>
+
+    <div class="form-label-group">
+        Insurance Tpye: <input type="text" class="form-control" placeholder="Optional" name='IT' id='IT' value={{post.Insurance_Tpye}}>
+    </div>
+    <br>
+
+    <div class="form-label-group">
+        Medical Number: <input type="text" class="form-control" placeholder="Optional" name='MN' id='MN' value={{post.Medical_Number}}>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}

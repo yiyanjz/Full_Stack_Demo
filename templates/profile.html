@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>Profile</title>
+{% endblock %}
+
+
+{% block body %} 
+    <h1>User Profile</h1>
+
+    <hr>
+    {% for post in posts%}
+        <h2>First Name: {{post.First_Name}}</h2>
+        <h3>Last Name: {{post.Last_Name}}</h3>
+        <h4>Date of Birth: {{post.DOB}}</h4>
+        <h5>Phone Number: {{post.Phone_Num}}</h5>
+        <h6>Patient_Full_Name: {{post.Patient_Full_Name}}</h6>
+        <h4>Start Date: {{post.Start_Date}}</h4>
+        <h5>Start Time: {{post.Start_Time}}</h5>
+        <h6>Appointment Type: {{post.Appointment_Type}}</h6>
+        <a href="/profile/delete/{{post.id}}">Delete</a>
+        <a href="/profile/edit/{{post.id}}">Edit</a>
+        <a href='/profile/page/{{post.id}}'>Page</a>
+    {% endfor %}
+
+{% endblock %}

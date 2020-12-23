@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+
+{% block body %}
+<br>
+<div>
+    <h1 style="display:inline"></h1>All Patient Profile</h1>
+    <a href="/new" class="btn btn-outline-success float-end"> Add New Patient</a>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <br>
+        <tr>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Patient's Date of Birth</th>
+        </tr>
+        <br>
+    </thead>
+</table>
+
+<div class="my p-3 bg-white rounded shadow-sm">
+    {% for post in posts %}
+    <div class="d-flex text-muted pt-3">
+        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff"
+                dy=".3em">32x32</text>
+        </svg>
+
+        <div class="pb-1 mb-0 small lh-sm border-bottom w-100">
+            <div class="d-flex justify-content-between"></div>
+            <!--me = gap between float-end = move it to the most right-->
+            <tr>
+                <a style="display:inline" href="/profile/delete/{{post.id}}"
+                    class="btn btn-outline-danger btn-sm float-end me-2">Delete</a>
+                <a style="display:inline" href="/profile/edit/{{post.id}}"
+                    class="btn btn-outline-primary btn-sm float-end me-2">Edit</a>
+                <a style="display:inline" href="/profile/page/{{post.id}}">{{post.First_Name}} {{post.Last_Name}}</a>
+                <p class="text-center">{{post.DOB}}</p>
+            </tr>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
