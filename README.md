@@ -25,6 +25,9 @@ Video Demo: Link
 2) Open the zip folder in Downloads
 3) Open up terminal or Command Prompt
 4) Go into the folder you just downloaded(Full_Stack_Demo)
+5) In terminal type python
+6) Type from app import db
+7) db.create_all() (to create the database)
 5) In terminal or command prompt type python app.py
 6) copy http://127.0.0.1:5000/ with in terminal and paste it in any browser (Google Chrome Prefered)
 1) To read in patients.cvs and appointment.cvs (--Optional--)
