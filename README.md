@@ -37,23 +37,28 @@ This system has a "Home Page" where your able to view all the patients that is s
 ![](images/Home.png)
                                                                         Fig 1.1
 
+<br>
 By clicking the button 'Add New Patient' on the upper right of our home page, it redirects to a page that lets you create a new patient based on the patient's First Name, Last Name, Date of Birth, Phone Number and if needed Address, Insurance Type and Medical Number for a easier process. Fig 1.2 shows the "Create New Patient Page". 
 
 ![](images/Create_Patient.png)
                                                                         Fig 1.2
 
+
+<br>
 By clicking the button 'Edit' on the home page, it redirects us to a page with the patients information already prefilled allows us to make changes(Fig 1.3). 
 
 ![](images/Edit_Patient.png)
                                                                         Fig 1.3
 
 
+<br>
 Next to the 'Edit' button there is a 'Delete' button which allows us to delete the patient (Fig 1.4)
 
 ![](images/Home.png)
                                                                         Fig 1.4
 
 
+<br>
 By clicking on the patient's name it will redirect you to a page with the individual patient profile. On the patient profile, it displays all patient demographic information and a list of appointments, ordered by start date/time with the newest on top (Fig 1.5). On the 'User Profile page' your also able to modify the patient's demographic information as well as appointment information and of course deleting it too (Fig 1.6).
 
 ![](images/User_Profile.png)
@@ -63,6 +68,7 @@ By clicking on the patient's name it will redirect you to a page with the indivi
                                                                         Fig 1.6
 
 
+<br>
 On the upper right side there is a 'Make New Appointment' button this is an interface to create a new appointment for an existing patient based on the patient full name, Start Date, Start Time, Appointment Type. Once the appointment is create is then order by the start-time and start_date on the "User Profile" page(Fig 1.7).
 
 ![](images/Create_Appointment.png)
