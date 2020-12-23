@@ -2,7 +2,6 @@
 Created a web based tool to CRED patients and appointments information with the option to extract data from an excel documents
 
 # Medical Practice Web-based Tool
-Video Demo: Link
 
 # Prerequisites
 1) Any Editor (Preferably Visual Studio Code)
