@@ -36,7 +36,7 @@ Optional
 # The Actual Project
 This system has a "Home Page" where your able to view all the patients that is stored within the database. On the top of the page it has a navbar, on the left side there is a home button that will redirect you to Home, next to home there is a drop down called Contact Us. Inside it has a link to the companies website, IG and FB. To the right there is a Search bar that will allow you to search (by first or last name) for whichever patients you need to find (all ordered by First Name). Each Patient below has a Birth date to check whether if is the actual patient, as well as a edit and delete button for demographic information. Fig 1.1 shows the "Home Page".
 
-![Screenshot](/images/Screen Shot 2020-12-22 at 4.39.42 PM.png)
+![](images/home.png)
 
 By clicking the button 'Add New Patient' on the upper right of our home page, it redirects to a page that lets you create a new patient based on the patient's First Name, Last Name, Date of Birth, Phone Number and if needed Address, Insurance Type and Medical Number for a easier process. Fig 1.2 shows the "Create New Patient Page". 
 
