@@ -17,21 +17,21 @@ Video Demo: Link
 6) DB Browser for Sqlite (a platform to view database)
 
 # Packages needed to install before running
-1) open up terminal
+Mac Users
 2) type sudo pip install flask
 3) type sudo pip install flask-sqlalchemy
 
 # Steps to run the project on your computer
 1) Clone or download the repository
 2) Open the zip folder in Downloads
-3) Open up terminal
-4) Go to your download Folder using cd Downloads/Full_Stack_Demo
-5) In terminal type python app.py
+3) Open up terminal or Command Prompt
+4) Go into the folder you just downloaded(Full_Stack_Demo)
+5) In terminal or command prompt type python app.py
 6) copy http://127.0.0.1:5000/ and paste it in any browser (Google Chrome Prefered)
 Optional
 1) To read in patients.cvs and appointment.cvs
-2) In terminal type python patients
-3) In terminal type python appointments
+2) In terminal or command prompt type python patients
+3) In terminal or command prompt type python appointments
 
 # The Actual Project
 This system has a "Home Page" where your able to view all the patients that is stored within the database. On the top of the page it has a navbar, on the left side there is a home button that will redirect you to Home, next to home there is a drop down called Contact Us. Inside it has a link to the companies website, IG and FB. To the right there is a Search bar that will allow you to search (by first or last name) for whichever patients you need to find (all ordered by First Name). Each Patient below has a Birth date to check whether if is the actual patient, as well as a edit and delete button for demographic information. Fig 1.1 shows the "Home Page".
